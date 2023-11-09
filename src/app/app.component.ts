@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'new-app';
+  spinLoader = false;
+  buttonValid = true;
+  public config = {
+    title:'Submit',
+    buttonClass:'bg-red-500',
+    showLoader:true,
+  }
+
+  onButtonClicked(){
+     this.spinLoader = true;
+     this.buttonValid = false;
+  }
 }
