@@ -11,12 +11,13 @@ export class TestBtnComponent implements OnChanges {
   @Input() spinLoader:boolean=false;
   @Input() buttonValid:boolean = true;
   @Output() buttonClicked= new EventEmitter();
-  
+ 
   onClick(){
     this.buttonClicked.emit(true);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.spinLoader)
+    console.log(this.buttonValid)
+    console.log(this.config)
   }
 }
